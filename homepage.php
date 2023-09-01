@@ -1,10 +1,20 @@
+<?php
+session_start();
+if(!isset($_SESSION['loggedin'])){
+    header("location:index.php");
+    
+}else{
+    session_destroy();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Dream College</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="styles.css">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
 </head>
@@ -15,7 +25,7 @@
              <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#courses">Courses</a></li>
-                <li><a href="library.html">Library</a></li>
+                <li><a href="library.php">Library</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#about_us">About Us</a></li>
              </ul>
@@ -49,36 +59,43 @@
     <h2 id="courses"class="course_title">Our Best Courses..!</h2>
     <div class="courses_grid">
         <div class="courses_card">
-            <span><img src="/images/bca.png" alt=""></span>
+            <span><img src="images/bca.png" ></span>
             <h4>BCA</h4>
         <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
             Quae, incidunt assumenda aspernatur magnam suscipit dolorum magni.
+            ipsum dolor sit, amet consectetur adipisicing elit. 
+            Lorem Quae, incidunt assumenda aspernatur magnam suscipit dolorum magni.
         </p>
         </div>
 
         <div class="courses_card">
-            <span><img src="/images/mca.png" alt=""></span>
+            <span><img src="images/mca.png" ></span>
             <h4>MCA</h4>
         <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
             Quae, incidunt assumenda aspernatur magnam suscipit dolorum magni.
+            ipsum dolor sit, amet consectetur adipisicing elit. 
         </p>
         </div>
 
         <div class="courses_card">
-            <span><img src="/images/bba.png" alt=""></span>
+            <span><img src="images/bba.png" ></span>
             <h4>BBA</h4>
         <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
             Quae, incidunt assumenda aspernatur magnam suscipit dolorum magni.
+            ipsum dolor sit, amet consectetur adipisicing elit.
+            ipsum dolor sit, amet consectetur adipisicing elit. 
         </p>
         </div>
 
         <div class="courses_card">
-            <span><img src="/images/bscit.png" alt=""></span>
+            <span><img src="images/bscit.png" ></span>
             <h4>BSC IT</h4>
         <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+            Quae, incidunt assumenda aspernatur magnam suscipit dolorum magni.
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
             Quae, incidunt assumenda aspernatur magnam suscipit dolorum magni.
         </p>
@@ -88,7 +105,7 @@
     <div class="about_container">
         <section class="about">
             <div class="about-image">
-                <img src="/images/about.png" alt="">
+                <img src="images/about.png" >
             </div>
             <div class="about-content">
                 <h2>Why Choose Us...</h2>
@@ -118,10 +135,10 @@
         <h2 id="gallery"class="gallery_title">Gallery..!</h2>
         <div class="slider-wrap">
             <div class="slider">
-              <img src="http://islamiacollege.edu.in/images/our-services/college/pic3.jpg" alt="" id="img1">
-              <img src="http://islamiacollege.edu.in/images/gallery/img1.jpg" alt="" id="img2">
-              <img src="http://islamiacollege.edu.in/images/gallery/pic2.jpg" alt="" id="img3">
-              <img src="http://islamiacollege.edu.in/images/gallery/pic3.jpg" alt="" id="img4">
+              <img src="http://islamiacollege.edu.in/images/our-services/college/pic3.jpg"  id="img1">
+              <img src="http://islamiacollege.edu.in/images/gallery/img1.jpg"  id="img2">
+              <img src="http://islamiacollege.edu.in/images/gallery/pic2.jpg"  id="img3">
+              <img src="http://islamiacollege.edu.in/images/gallery/pic3.jpg"  id="img4">
             </div>
             <div class="slider-nav">
                 <a href="#img1"></a>
