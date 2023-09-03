@@ -16,6 +16,50 @@ html{
     box-sizing: border-box;
     overflow: hidden;
 }
+
+.notification {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    margin: 0 auto;
+    position: relative;
+    bottom: 0px;
+    right: 0px;
+    box-shadow: 1px 1px 12px rgba(0,0,0, 0.3);
+  }
+  
+  .notify {
+    width: 100%;
+    border: solid 2px #ff469f;
+  }
+  .notify-title {
+    width: 210px;
+    text-align: center;
+    background: linear-gradient(to right, #ff469f, #ff6062);
+    position: absolute;
+    z-index: 1;
+    height: 50px;
+  }
+  .notify-title:after {
+    position: absolute;
+    content: "";
+    right: -39px;
+    top: 0px;
+  }
+  .notify-title h5 {
+    font-size: 17px;
+    margin: 8% 0;
+    color: #fff;
+  }
+  .notify marquee {
+    font-size: 16px;
+    margin-top: 15px;
+  }
+  .notify-content a {
+    margin-right: 4rem;
+    font-style: oblique;
+  }
+  
 /* NAVBAR SECTION STARTED */
 .navbar{
     width: 100%;
@@ -364,8 +408,6 @@ a{
 .slider{
     display: flex;
     aspect-ratio: 16 / 9;
-    overflow: auto;
-    scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.4);
     border-radius: 0.5rem;

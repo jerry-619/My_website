@@ -4,7 +4,7 @@ if(!isset($_SESSION['loggedin'])){
     header("location:index.php");
     
 }else{
-    session_destroy();
+    // session_destroy();
 }
 ?>
 
@@ -18,7 +18,28 @@ if(!isset($_SESSION['loggedin'])){
     <link rel="stylesheet" href="styles.css">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
 </head>
-<body >
+<body>
+<div class="notification">
+        <div class="notify-title">
+            <h5>Latest Notifications</h5>
+        </div>
+        <div class="notify">
+            <marquee class="notify-content" scrollamount="12">
+                <a href="http://erp.islamiacollege.co.in/STUDENTHELPDESK/STUDENTLOGIN.ASPX">                  
+                <strong> ONLINE ADMISSION FORM FOR ( 3RDTH & 4TH SEMESTER ) BATCH 2022. 
+                    LAST SUBMISSION DATE ( 4TH SEPTEMBER 2023). </strong>
+             </a>
+                <a style="color:Red;" href="http://www.islamiacollege.co.in/ADMINISTRATOR/NOTIFICATIONS/974-FINA.PDF">                  
+                <strong> DATE SHEET FOR UG 6TH SEMESTER- STUDENTS (BATCH 2020) REGULAR. </strong>
+             </a>
+                <a style="color:green;" href="http://erp.islamiacollege.co.in/STUDENTHELPDESK/STUDENTLOGIN.ASPX">                  
+                <strong> ONLINE RESULT FOR PG REGULAR 4TH SEMESTER ( BATCH 2020 ). </strong>
+             </a>
+            </marquee>
+        </div>
+    </div>
+</div>
+</div>
     <div class="navbar">
         <img src="images/logo.png" class="logo">
         <nav>
@@ -68,7 +89,7 @@ if(!isset($_SESSION['loggedin'])){
             Lorem Quae, incidunt assumenda aspernatur magnam suscipit dolorum magni.
         </p>
         </div>
-
+       
         <div class="courses_card">
             <span><img src="images/mca.png" ></span>
             <h4>MCA</h4>
