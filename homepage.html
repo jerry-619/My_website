@@ -1,13 +1,3 @@
-<?php
-session_start();
-if(!isset($_SESSION['loggedin'])){
-    header("location:index.php");
-    
-}else{
-    // session_destroy();
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +5,7 @@ if(!isset($_SESSION['loggedin'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Dream College</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
 </head>
 <body>
@@ -42,13 +32,18 @@ if(!isset($_SESSION['loggedin'])){
 </div>
     <div class="navbar">
         <img src="images/logo.png" class="logo">
-        <nav>
+        <nav style="padding-right: 30px;">
              <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#courses">Courses</a></li>
-                <li><a href="library.php">Library</a></li>
+                <li><a href="library.html">Library</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#about_us">About Us</a></li>
+                <a href="login.php" target="_blank">
+            <button id="btnK" class="button">
+                Student Login
+            </button>
+        </a>
              </ul>
         </nav>
     </div>

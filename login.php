@@ -1,17 +1,31 @@
+<?php
+$u = 'admin';
+$p = 'pass@123';
+if (isset($_REQUEST['username']) && isset($_REQUEST['password'])) {
+    if ($u == $_REQUEST['username'] && $p == $_REQUEST['password']) {
+        session_start();
+        header("location:lms.php");
+        $_SESSION['loggedin'] = true;
+    } else {
+        echo 'Incorrect UserName or Password';
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="css/login.css">
     <title>Login Page</title>
 </head>
 
 <body>
     <div class="container">
         <div class="box">
-            <form action="index.php" method="post">
+            <form action="login.php" method="post">
                 <div class="box-login" id="login">
 
                     <div class="top-header">
@@ -41,16 +55,3 @@
 
 </html>
 
-<?php
-$u = 'admin';
-$p = 'pass@123';
-if (isset($_REQUEST['username']) && isset($_REQUEST['password'])) {
-    if ($u == $_REQUEST['username'] && $p == $_REQUEST['password']) {
-        session_start();
-        header("location:homepage.php");
-        $_SESSION['loggedin'] = true;
-    } else {
-        echo 'Incorrect UserName or Password';
-    }
-}
-?>
